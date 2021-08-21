@@ -11,28 +11,22 @@ public class Bowling{
         players.put(name, p);
     }
 
-    public void getWinner{
+    public void getWinner(){
 
-        ArrayList<Integer> scores = new ArrayList<Integer>(3);
+        List<Integer> scores = new ArrayList<Integer>();
 
         //add points to scores array
-
-        players.forEach(name, points){
-            scores.add(points);
-        }
-
-        // check the highest score and print winner
+        players.forEach((name, points)-> scores.add(points));
 
         int highestScore = Collections.max(scores);
 
-        players.forEach(name, points){
+        // check the highest score and print winner
+        players.forEach((name, points)->{
             if(points == highestScore){
                 System.out.println(name + " " + points);
                 break;
             }
-        }
-
-
+        })
     }
 }
 
